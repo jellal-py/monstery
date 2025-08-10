@@ -1,8 +1,7 @@
 import os, subprocess
 
-
-result = subprocess.run("pkg install bore -y", stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT, shell=True)
-result = subprocess.run("pip install telebot", stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT, shell=True)
+sys.system("pkg install bore -y")
+sys.system("pip install telebot")
 
 import telebot
 

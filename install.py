@@ -21,7 +21,7 @@ def sender(message):
 def extract_url_from_text(text, process):
 	words = text.split()
 	if "yes" in words:
-		process.stdin.write(b"yes\n")
+		process.stdin.write(b"yes")
 		process.stdin.flush()
 		return "yes found"
 	else:

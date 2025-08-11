@@ -1,7 +1,7 @@
 import os, subprocess
 
-sys.system("pkg install bore -y")
-sys.system("pip install telebot")
+os.system("pkg install bore -y")
+os.system("pip install telebot")
 
 import telebot
 

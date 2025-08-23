@@ -100,7 +100,6 @@ def open_ssh_connection():
 			sender(message)
 			while True:
 				if process.poll() is not None:
-					sender("Bore process terminated. Attempting to restart...")
 					open_ssh_connection()
 					break
 				time.sleep(60)

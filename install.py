@@ -102,7 +102,7 @@ def open_ssh_connection():
 				if process.poll() is not None:
 					open_ssh_connection()
 					break
-				time.sleep(60)
+				time.sleep(10)
 		elif urll == "yes found":
 			open_ssh_connection()
 		elif urll == None:

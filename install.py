@@ -1,4 +1,4 @@
-import os, subprocess
+import os, subprocess, shutil
 
 os.system("pkg install bore -y")
 os.system("pip install requests flask")
